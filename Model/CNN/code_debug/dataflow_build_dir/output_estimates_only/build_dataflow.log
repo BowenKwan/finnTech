@@ -1,0 +1,19 @@
+[2022-11-09 13:58:30,620] Running step: step_qonnx_to_finn [1/17]
+[2022-11-09 13:58:30,622] Running step: step_tidy_up [2/17]
+[2022-11-09 13:58:30,666] Running verification for initial_python
+[2022-11-09 13:58:30,676] /scratch/bkwan/FINN/finn/deps/qonnx/src/qonnx/util/basic.py:286: UserWarning: The values of tensor global_in can't be represented with the set datatype annotation (INT8), they will be rounded to match the datatype annotation.
+[2022-11-09 13:58:30,676]   warnings.warn(
+[2022-11-09 13:58:31,916] Verification for initial_python : FAIL
+[2022-11-09 13:58:31,918] Running step: step_streamline [3/17]
+[2022-11-09 13:58:32,837] /scratch/bkwan/FINN/finn/deps/qonnx/src/qonnx/transformation/infer_data_layouts.py:119: UserWarning: Assuming 4D input is NCHW
+[2022-11-09 13:58:32,837]   warnings.warn("Assuming 4D input is NCHW")
+[2022-11-09 13:58:32,842] Running verification for streamlined_python
+[2022-11-09 13:58:34,788] Verification for streamlined_python : FAIL
+[2022-11-09 13:58:34,790] Running step: step_convert_to_hls [4/17]
+[2022-11-09 13:58:35,122] /scratch/bkwan/FINN/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_0: INT32 -> INT24
+[2022-11-09 13:58:35,123]   warnings.warn(warn_str)
+[2022-11-09 13:58:35,144] /scratch/bkwan/FINN/finn/src/finn/transformation/fpgadataflow/convert_to_hls_layers.py:383: UserWarning: MaxPoolNHWC_0: could not convert to HLS
+[2022-11-09 13:58:35,144]   warnings.warn(node.name + ": could not convert to HLS")
+[2022-11-09 13:58:35,144] /scratch/bkwan/FINN/finn/src/finn/transformation/fpgadataflow/convert_to_hls_layers.py:383: UserWarning: MaxPoolNHWC_1: could not convert to HLS
+[2022-11-09 13:58:35,144]   warnings.warn(node.name + ": could not convert to HLS")
+[2022-11-09 13:58:35,155] Running step: step_create_dataflow_partition [5/17]
