@@ -86,6 +86,8 @@ else:
 
 model_for_sim.save("./onnx_models/" + verif_model_filename)
 model_for_sim.save("./dataflow_build_dir/model.onnx")  # fixed by the compiler
+model_for_sim.save("./dataflow_build_dir_custom/model.onnx")  # fixed by the compiler
+
 
 # Copy the configuration file for the FINN compiler
 shutil.copyfile("../configuration_files/dataflow_build_config.json",
