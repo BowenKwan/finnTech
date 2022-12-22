@@ -2,7 +2,7 @@
   "Thresholding_Batch_0": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
-    "LUT": 8,
+    "LUT": 3,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
@@ -18,15 +18,15 @@
   "ConvolutionInputGenerator_0": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
-    "LUT": 332,
+    "LUT": 312,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
   },
   "MatrixVectorActivation_0": {
-    "BRAM_18K": 64,
-    "BRAM_efficiency": 0.001953125,
-    "LUT": 35922,
+    "BRAM_18K": 1,
+    "BRAM_efficiency": 0.0234375,
+    "LUT": 482,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
@@ -34,23 +34,7 @@
   "Thresholding_Batch_1": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
-    "LUT": 768,
-    "URAM": 0,
-    "URAM_efficiency": 1,
-    "DSP": 0
-  },
-  "ConvolutionInputGenerator_1": {
-    "BRAM_18K": 0,
-    "BRAM_efficiency": 1,
-    "LUT": 1324,
-    "URAM": 0,
-    "URAM_efficiency": 1,
-    "DSP": 0
-  },
-  "Pool_Batch_0": {
-    "BRAM_18K": 0,
-    "BRAM_efficiency": 1,
-    "LUT": 0,
+    "LUT": 16,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
@@ -63,18 +47,18 @@
     "URAM_efficiency": 1,
     "DSP": 0
   },
-  "ConvolutionInputGenerator_2": {
+  "ConvolutionInputGenerator_1": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
-    "LUT": 1324,
+    "LUT": 396,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
   },
   "MatrixVectorActivation_1": {
-    "BRAM_18K": 683,
-    "BRAM_efficiency": 0.01171303074670571,
-    "LUT": 379087,
+    "BRAM_18K": 24,
+    "BRAM_efficiency": 0.03125,
+    "LUT": 6020,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
@@ -82,20 +66,20 @@
   "Thresholding_Batch_2": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
-    "LUT": 2048,
+    "LUT": 64,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
   },
-  "ConvolutionInputGenerator_3": {
+  "ConvolutionInputGenerator_2": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
-    "LUT": 2348,
+    "LUT": 348,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
   },
-  "Pool_Batch_1": {
+  "Pool_Batch_0": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
     "LUT": 0,
@@ -111,18 +95,18 @@
     "URAM_efficiency": 1,
     "DSP": 0
   },
-  "ConvolutionInputGenerator_4": {
+  "ConvolutionInputGenerator_3": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
-    "LUT": 2348,
+    "LUT": 348,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
   },
   "MatrixVectorActivation_2": {
-    "BRAM_18K": 683,
-    "BRAM_efficiency": 0.04685212298682284,
-    "LUT": 378946,
+    "BRAM_18K": 24,
+    "BRAM_efficiency": 0.125,
+    "LUT": 6012,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
@@ -130,7 +114,7 @@
   "Thresholding_Batch_3": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
-    "LUT": 4096,
+    "LUT": 32,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
@@ -143,15 +127,15 @@
     "URAM_efficiency": 1,
     "DSP": 0
   },
-  "ConvolutionInputGenerator_5": {
+  "ConvolutionInputGenerator_4": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
-    "LUT": 4396,
+    "LUT": 372,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
   },
-  "Pool_Batch_2": {
+  "Pool_Batch_1": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
     "LUT": 0,
@@ -160,9 +144,9 @@
     "DSP": 0
   },
   "MatrixVectorActivation_3": {
-    "BRAM_18K": 683,
-    "BRAM_efficiency": 0.37481698389458273,
-    "LUT": 378799,
+    "BRAM_18K": 1,
+    "BRAM_efficiency": 0.625,
+    "LUT": 388,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
@@ -170,38 +154,22 @@
   "Thresholding_Batch_4": {
     "BRAM_18K": 0,
     "BRAM_efficiency": 1,
-    "LUT": 4096,
+    "LUT": 32,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
   },
   "MatrixVectorActivation_4": {
-    "BRAM_18K": 285,
-    "BRAM_efficiency": 0.001949317738791423,
-    "LUT": 158073,
-    "URAM": 0,
-    "URAM_efficiency": 1,
-    "DSP": 0
-  },
-  "Thresholding_Batch_5": {
-    "BRAM_18K": 0,
-    "BRAM_efficiency": 1,
-    "LUT": 240,
-    "URAM": 0,
-    "URAM_efficiency": 1,
-    "DSP": 0
-  },
-  "MatrixVectorActivation_5": {
-    "BRAM_18K": 3,
-    "BRAM_efficiency": 0.0014467592592592592,
-    "LUT": 1536,
+    "BRAM_18K": 1,
+    "BRAM_efficiency": 0.00244140625,
+    "LUT": 324,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
   },
   "total": {
-    "BRAM_18K": 2401.0,
-    "LUT": 1355691.0,
+    "BRAM_18K": 51.0,
+    "LUT": 15149.0,
     "URAM": 0.0,
     "DSP": 0.0
   }

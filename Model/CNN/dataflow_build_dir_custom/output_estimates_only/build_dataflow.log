@@ -7114,3 +7114,29 @@
 [2022-12-21 06:28:40,390]   warnings.warn(
 [2022-12-21 06:28:40,612] Running step: step_apply_folding_config [7/8]
 [2022-12-21 06:50:15,266] Running verification for folded_hls_cppsim
+[2022-12-22 17:00:54,359] Running step: step_qonnx_to_finn [1/8]
+[2022-12-22 17:00:54,374] Running step: step_tidy_up [2/8]
+[2022-12-22 17:00:54,465] Running verification for initial_python
+[2022-12-22 17:00:54,523] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/util/basic.py:286: UserWarning: The values of tensor MultiThreshold_0_out0 can't be represented with the set datatype annotation (INT3), they will be rounded to match the datatype annotation.
+[2022-12-22 17:00:54,523]   warnings.warn(
+[2022-12-22 17:00:54,846] Verification for initial_python : FAIL
+[2022-12-22 17:00:54,853] Running step: step_streamline [3/8]
+[2022-12-22 17:00:56,817] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/transformation/infer_data_layouts.py:119: UserWarning: Assuming 4D input is NCHW
+[2022-12-22 17:00:56,817]   warnings.warn("Assuming 4D input is NCHW")
+[2022-12-22 17:00:56,826] Running verification for streamlined_python
+[2022-12-22 17:00:57,341] Verification for streamlined_python : FAIL
+[2022-12-22 17:00:57,349] Running step: custom_step_convert_to_hls [4/8]
+[2022-12-22 17:00:57,482] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_1: INT32 -> INT8
+[2022-12-22 17:00:57,482]   warnings.warn(warn_str)
+[2022-12-22 17:00:57,484] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_2: INT32 -> INT16
+[2022-12-22 17:00:57,484]   warnings.warn(warn_str)
+[2022-12-22 17:00:57,485] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_3: INT32 -> INT16
+[2022-12-22 17:00:57,485]   warnings.warn(warn_str)
+[2022-12-22 17:00:57,487] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_4: INT32 -> INT16
+[2022-12-22 17:00:57,487]   warnings.warn(warn_str)
+[2022-12-22 17:00:57,553] Running step: step_create_dataflow_partition [5/8]
+[2022-12-22 17:00:57,583] Running step: step_target_fps_parallelization [6/8]
+[2022-12-22 17:00:57,615] Running step: step_apply_folding_config [7/8]
+[2022-12-22 17:01:31,072] Running verification for folded_hls_cppsim
+[2022-12-22 17:01:32,545] Verification for folded_hls_cppsim : FAIL
+[2022-12-22 17:01:32,548] Running step: step_generate_estimate_reports [8/8]
