@@ -1,0 +1,251 @@
+{
+  "Defaults": {},
+  "Thresholding_Batch_0": {
+    "PE": 7,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "FMPadding_Batch_0": {
+    "SIMD": 7
+  },
+  "ConvolutionInputGenerator_0": {
+    "SIMD": 7,
+    "ram_style": "distributed"
+  },
+  "MatrixVectorActivation_0": {
+    "PE": 16,
+    "SIMD": 63,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "Thresholding_Batch_1": {
+    "PE": 16,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "FMPadding_Batch_1": {
+    "SIMD": 16
+  },
+  "ConvolutionInputGenerator_1": {
+    "SIMD": 16,
+    "ram_style": "distributed"
+  },
+  "MatrixVectorActivation_1": {
+    "PE": 16,
+    "SIMD": 144,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "Thresholding_Batch_2": {
+    "PE": 16,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "FMPadding_Batch_2": {
+    "SIMD": 16
+  },
+  "ConvolutionInputGenerator_2": {
+    "SIMD": 16,
+    "ram_style": "distributed"
+  },
+  "MatrixVectorActivation_2": {
+    "PE": 16,
+    "SIMD": 144,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "Thresholding_Batch_3": {
+    "PE": 16,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "FMPadding_Batch_3": {
+    "SIMD": 16
+  },
+  "ConvolutionInputGenerator_3": {
+    "SIMD": 16,
+    "ram_style": "distributed"
+  },
+  "MatrixVectorActivation_3": {
+    "PE": 16,
+    "SIMD": 144,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "Thresholding_Batch_4": {
+    "PE": 32,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "FMPadding_Batch_4": {
+    "SIMD": 32
+  },
+  "ConvolutionInputGenerator_4": {
+    "SIMD": 32,
+    "ram_style": "distributed"
+  },
+  "MatrixVectorActivation_4": {
+    "PE": 32,
+    "SIMD": 96,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "Thresholding_Batch_5": {
+    "PE": 32,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "FMPadding_Batch_5": {
+    "SIMD": 32
+  },
+  "ConvolutionInputGenerator_5": {
+    "SIMD": 32,
+    "ram_style": "distributed"
+  },
+  "MatrixVectorActivation_5": {
+    "PE": 32,
+    "SIMD": 96,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "Thresholding_Batch_6": {
+    "PE": 32,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "ConvolutionInputGenerator_6": {
+    "SIMD": 32,
+    "ram_style": "distributed"
+  },
+  "Pool_Batch_0": {
+    "PE": 32
+  },
+  "FMPadding_Batch_6": {
+    "SIMD": 32
+  },
+  "ConvolutionInputGenerator_7": {
+    "SIMD": 32,
+    "ram_style": "distributed"
+  },
+  "MatrixVectorActivation_6": {
+    "PE": 32,
+    "SIMD": 96,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "Thresholding_Batch_7": {
+    "PE": 64,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "FMPadding_Batch_7": {
+    "SIMD": 64
+  },
+  "ConvolutionInputGenerator_8": {
+    "SIMD": 64,
+    "ram_style": "distributed"
+  },
+  "MatrixVectorActivation_7": {
+    "PE": 16,
+    "SIMD": 192,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "Thresholding_Batch_8": {
+    "PE": 64,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "FMPadding_Batch_8": {
+    "SIMD": 64
+  },
+  "ConvolutionInputGenerator_9": {
+    "SIMD": 64,
+    "ram_style": "distributed"
+  },
+  "MatrixVectorActivation_8": {
+    "PE": 16,
+    "SIMD": 192,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "Thresholding_Batch_9": {
+    "PE": 64,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "FMPadding_Batch_9": {
+    "SIMD": 64
+  },
+  "ConvolutionInputGenerator_10": {
+    "SIMD": 64,
+    "ram_style": "distributed"
+  },
+  "Pool_Batch_1": {
+    "PE": 64
+  },
+  "MatrixVectorActivation_9": {
+    "PE": 6,
+    "SIMD": 576,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "Thresholding_Batch_10": {
+    "PE": 576,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "MatrixVectorActivation_10": {
+    "PE": 1,
+    "SIMD": 1,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "Thresholding_Batch_11": {
+    "PE": 1,
+    "ram_style": "distributed",
+    "mem_mode": "const",
+    "runtime_writeable_weights": 0
+  },
+  "MatrixVectorActivation_11": {
+    "PE": 1,
+    "SIMD": 1,
+    "ram_style": "auto",
+    "resType": "lut",
+    "mem_mode": "decoupled",
+    "runtime_writeable_weights": 0
+  }
+}
