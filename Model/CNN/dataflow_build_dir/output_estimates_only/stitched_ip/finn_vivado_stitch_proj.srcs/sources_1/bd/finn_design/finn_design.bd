@@ -1,0 +1,323 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x8F53E98346F43589",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../finn_vivado_stitch_proj.gen/sources_1/bd/finn_design",
+      "name": "finn_design",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "StreamingFIFO_0": "",
+      "MatrixVectorActivation_0": {
+        "MatrixVectorActivation_0": "",
+        "MatrixVectorActivation_0_wstrm": ""
+      }
+    },
+    "interface_ports": {
+      "s_axis_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "finn_design_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000.000000"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "216"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          }
+        }
+      },
+      "m_axis_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "finn_design_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000.000000"
+          },
+          "HAS_TKEEP": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TLAST": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TREADY": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "HAS_TSTRB": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "2",
+            "value_src": "const_prop"
+          },
+          "TDEST_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TID_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TUSER_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          }
+        }
+      }
+    },
+    "ports": {
+      "ap_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "s_axis_0:m_axis_0",
+            "value_src": "default"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "ap_rst_n",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "finn_design_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000.000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "StreamingFIFO_0": {
+        "vlnv": "xilinx.com:hls:StreamingFIFO_0:1.0",
+        "xci_name": "finn_design_StreamingFIFO_0_0",
+        "xci_path": "ip/finn_design_StreamingFIFO_0_0/finn_design_StreamingFIFO_0_0.xci",
+        "inst_hier_path": "StreamingFIFO_0"
+      },
+      "MatrixVectorActivation_0": {
+        "interface_ports": {
+          "out_V": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "in0_V": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          }
+        },
+        "ports": {
+          "ap_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "ap_rst_n": {
+            "type": "rst",
+            "direction": "I"
+          }
+        },
+        "components": {
+          "MatrixVectorActivation_0": {
+            "vlnv": "xilinx.com:hls:MatrixVectorActivation_0:1.0",
+            "xci_name": "finn_design_MatrixVectorActivation_0_0",
+            "xci_path": "ip/finn_design_MatrixVectorActivation_0_0/finn_design_MatrixVectorActivation_0_0.xci",
+            "inst_hier_path": "MatrixVectorActivation_0/MatrixVectorActivation_0"
+          },
+          "MatrixVectorActivation_0_wstrm": {
+            "vlnv": "xilinx.com:user:memstream:1.0",
+            "xci_name": "finn_design_MatrixVectorActivation_0_wstrm_0",
+            "xci_path": "ip/finn_design_MatrixVectorActivation_0_wstrm_0/finn_design_MatrixVectorActivation_0_wstrm_0.xci",
+            "inst_hier_path": "MatrixVectorActivation_0/MatrixVectorActivation_0_wstrm",
+            "parameters": {
+              "MEM_DEPTH": {
+                "value": "576"
+              },
+              "MEM_INIT": {
+                "value": "/scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/code_gen_ipgen_MatrixVectorActivation_0_jycgp900/"
+              },
+              "MEM_WIDTH": {
+                "value": "1728"
+              },
+              "NSTREAMS": {
+                "value": "1"
+              },
+              "RAM_STYLE": {
+                "value": "auto"
+              },
+              "STRM0_DEPTH": {
+                "value": "576"
+              },
+              "STRM0_OFFSET": {
+                "value": "0"
+              },
+              "STRM0_WIDTH": {
+                "value": "1728"
+              }
+            }
+          }
+        },
+        "interface_nets": {
+          "MatrixVectorActivation_0_out_V": {
+            "interface_ports": [
+              "out_V",
+              "MatrixVectorActivation_0/out_V"
+            ]
+          },
+          "MatrixVectorActivation_0_wstrm_m_axis_0": {
+            "interface_ports": [
+              "MatrixVectorActivation_0_wstrm/m_axis_0",
+              "MatrixVectorActivation_0/weights_V"
+            ]
+          },
+          "in0_V_1": {
+            "interface_ports": [
+              "in0_V",
+              "MatrixVectorActivation_0/in0_V"
+            ]
+          }
+        },
+        "nets": {
+          "ap_clk_1": {
+            "ports": [
+              "ap_clk",
+              "MatrixVectorActivation_0_wstrm/aclk",
+              "MatrixVectorActivation_0/ap_clk"
+            ]
+          },
+          "ap_rst_n_1": {
+            "ports": [
+              "ap_rst_n",
+              "MatrixVectorActivation_0_wstrm/aresetn",
+              "MatrixVectorActivation_0/ap_rst_n"
+            ]
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "MatrixVectorActivation_0_out_V": {
+        "interface_ports": [
+          "m_axis_0",
+          "MatrixVectorActivation_0/out_V"
+        ]
+      },
+      "StreamingFIFO_0_out_V": {
+        "interface_ports": [
+          "StreamingFIFO_0/out_V",
+          "MatrixVectorActivation_0/in0_V"
+        ]
+      },
+      "in0_V_0_1": {
+        "interface_ports": [
+          "s_axis_0",
+          "StreamingFIFO_0/in0_V"
+        ]
+      }
+    },
+    "nets": {
+      "ap_clk_0_1": {
+        "ports": [
+          "ap_clk",
+          "StreamingFIFO_0/ap_clk",
+          "MatrixVectorActivation_0/ap_clk"
+        ]
+      },
+      "ap_rst_n_0_1": {
+        "ports": [
+          "ap_rst_n",
+          "StreamingFIFO_0/ap_rst_n",
+          "MatrixVectorActivation_0/ap_rst_n"
+        ]
+      }
+    }
+  }
+}

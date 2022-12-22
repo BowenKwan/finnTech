@@ -1,0 +1,256 @@
+[2022-12-15 03:11:48,880] Running step: step_qonnx_to_finn [1/17]
+[2022-12-15 03:11:48,884] Running step: step_tidy_up [2/17]
+[2022-12-15 03:11:49,102] Running verification for initial_python
+[2022-12-15 03:11:49,135] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/util/basic.py:286: UserWarning: The values of tensor MultiThreshold_0_out0 can't be represented with the set datatype annotation (INT3), they will be rounded to match the datatype annotation.
+[2022-12-15 03:11:49,135]   warnings.warn(
+[2022-12-15 03:12:56,682] Running step: step_qonnx_to_finn [1/17]
+[2022-12-15 03:12:56,685] Running step: step_tidy_up [2/17]
+[2022-12-15 03:12:56,721] Running verification for initial_python
+[2022-12-15 03:12:56,755] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/util/basic.py:286: UserWarning: The values of tensor MultiThreshold_0_out0 can't be represented with the set datatype annotation (INT3), they will be rounded to match the datatype annotation.
+[2022-12-15 03:12:56,755]   warnings.warn(
+[2022-12-15 03:12:59,520] Verification for initial_python : FAIL
+[2022-12-15 03:12:59,523] Running step: step_streamline [3/17]
+[2022-12-15 03:13:00,337] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/transformation/infer_data_layouts.py:124: UserWarning: Assuming 2D input is NC
+[2022-12-15 03:13:00,337]   warnings.warn("Assuming 2D input is NC")
+[2022-12-15 03:13:00,341] Running verification for streamlined_python
+[2022-12-15 03:13:03,103] Verification for streamlined_python : FAIL
+[2022-12-15 03:13:03,106] Running step: step_convert_to_hls [4/17]
+[2022-12-15 03:13:03,139] Running step: step_create_dataflow_partition [5/17]
+[2022-12-15 03:13:03,145] Running step: step_target_fps_parallelization [6/17]
+[2022-12-15 03:13:03,152] Running step: step_apply_folding_config [7/17]
+[2022-12-15 03:13:32,776] Running verification for folded_hls_cppsim
+[2022-12-15 03:13:35,783] Verification for folded_hls_cppsim : FAIL
+[2022-12-15 03:13:35,785] Running step: step_generate_estimate_reports [8/17]
+[2022-12-15 03:13:35,792] Running step: step_hls_codegen [9/17]
+[2022-12-15 03:14:00,150] Running step: step_hls_ipgen [10/17]
+[2022-12-15 03:16:38,953] Running step: step_set_fifo_depths [11/17]
+[2022-12-15 03:16:38,960] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for MatrixVectorActivation_0
+[2022-12-15 03:16:38,960]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-15 03:16:39,011] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for MatrixVectorActivation_0
+[2022-12-15 03:16:39,011]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-15 03:17:26,436] make: Entering directory '/scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_kgxtkeay'
+[2022-12-15 03:17:26,436] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o pyverilator_wrapper.o /scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_kgxtkeay/pyverilator_wrapper.cpp
+[2022-12-15 03:17:26,436] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+[2022-12-15 03:17:26,436] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o verilated_vcd_c.o /usr/share/verilator/include/verilated_vcd_c.cpp
+[2022-12-15 03:17:26,437] /usr/bin/perl /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vfinn_design_wrapper.cpp > Vfinn_design_wrapper__ALLcls.cpp
+[2022-12-15 03:17:26,437] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o Vfinn_design_wrapper__ALLcls.o Vfinn_design_wrapper__ALLcls.cpp
+[2022-12-15 03:17:26,437] /usr/bin/perl /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vfinn_design_wrapper__Trace.cpp Vfinn_design_wrapper__Syms.cpp Vfinn_design_wrapper__Trace__Slow.cpp > Vfinn_design_wrapper__ALLsup.cpp
+[2022-12-15 03:17:26,437] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o Vfinn_design_wrapper__ALLsup.o Vfinn_design_wrapper__ALLsup.cpp
+[2022-12-15 03:17:26,437]       Archiving Vfinn_design_wrapper__ALL.a ...
+[2022-12-15 03:17:26,437] ar r Vfinn_design_wrapper__ALL.a Vfinn_design_wrapper__ALLcls.o Vfinn_design_wrapper__ALLsup.o
+[2022-12-15 03:17:26,437] ranlib Vfinn_design_wrapper__ALL.a
+[2022-12-15 03:17:26,437] g++ -fPIC -shared pyverilator_wrapper.o verilated.o verilated_vcd_c.o Vfinn_design_wrapper__ALL.a    -o Vfinn_design_wrapper -lm -lstdc++  2>&1 | c++filt
+[2022-12-15 03:17:26,437] make: Leaving directory '/scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_kgxtkeay'
+[2022-12-15 03:17:26,437] ar: creating Vfinn_design_wrapper__ALL.a
+[2022-12-15 03:17:26,701] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for MatrixVectorActivation_0
+[2022-12-15 03:17:26,701]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-15 03:17:26,751] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for MatrixVectorActivation_0
+[2022-12-15 03:17:26,752]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-15 03:17:47,710] Running step: step_create_stitched_ip [12/17]
+[2022-12-15 03:18:13,023] Vivado stitched IP written into ./output_estimates_only/stitched_ip
+[2022-12-15 03:18:13,027] Running verification for stitched_ip_rtlsim
+[2022-12-15 03:18:17,321] make: Entering directory '/scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_csvmgw5o'
+[2022-12-15 03:18:17,321] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o pyverilator_wrapper.o /scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_csvmgw5o/pyverilator_wrapper.cpp
+[2022-12-15 03:18:17,321] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+[2022-12-15 03:18:17,322] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o verilated_vcd_c.o /usr/share/verilator/include/verilated_vcd_c.cpp
+[2022-12-15 03:18:17,322] /usr/bin/perl /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vfinn_design_wrapper.cpp > Vfinn_design_wrapper__ALLcls.cpp
+[2022-12-15 03:18:17,322] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o Vfinn_design_wrapper__ALLcls.o Vfinn_design_wrapper__ALLcls.cpp
+[2022-12-15 03:18:17,322] /usr/bin/perl /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vfinn_design_wrapper__Trace.cpp Vfinn_design_wrapper__Syms.cpp Vfinn_design_wrapper__Trace__Slow.cpp > Vfinn_design_wrapper__ALLsup.cpp
+[2022-12-15 03:18:17,322] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o Vfinn_design_wrapper__ALLsup.o Vfinn_design_wrapper__ALLsup.cpp
+[2022-12-15 03:18:17,322]       Archiving Vfinn_design_wrapper__ALL.a ...
+[2022-12-15 03:18:17,322] ar r Vfinn_design_wrapper__ALL.a Vfinn_design_wrapper__ALLcls.o Vfinn_design_wrapper__ALLsup.o
+[2022-12-15 03:18:17,322] ranlib Vfinn_design_wrapper__ALL.a
+[2022-12-15 03:18:17,322] g++ -fPIC -shared pyverilator_wrapper.o verilated.o verilated_vcd_c.o Vfinn_design_wrapper__ALL.a    -o Vfinn_design_wrapper -lm -lstdc++  2>&1 | c++filt
+[2022-12-15 03:18:17,323] make: Leaving directory '/scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_csvmgw5o'
+[2022-12-15 03:18:17,323] ar: creating Vfinn_design_wrapper__ALL.a
+[2022-12-15 03:18:18,066] Verification for stitched_ip_rtlsim : FAIL
+[2022-12-15 03:18:18,068] Running step: step_measure_rtlsim_performance [13/17]
+[2022-12-15 03:18:28,249] make: Entering directory '/scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_tjg2g17j'
+[2022-12-15 03:18:28,249] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11 -O3   -c -o pyverilator_wrapper.o /scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_tjg2g17j/pyverilator_wrapper.cpp
+[2022-12-15 03:18:28,249] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11 -O3   -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+[2022-12-15 03:18:28,249] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11 -O3   -c -o verilated_vcd_c.o /usr/share/verilator/include/verilated_vcd_c.cpp
+[2022-12-15 03:18:28,249] /usr/bin/perl /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vfinn_design_wrapper.cpp > Vfinn_design_wrapper__ALLcls.cpp
+[2022-12-15 03:18:28,250] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11 -O3   -c -o Vfinn_design_wrapper__ALLcls.o Vfinn_design_wrapper__ALLcls.cpp
+[2022-12-15 03:18:28,250] /usr/bin/perl /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vfinn_design_wrapper__Trace.cpp Vfinn_design_wrapper__Syms.cpp Vfinn_design_wrapper__Trace__Slow.cpp > Vfinn_design_wrapper__ALLsup.cpp
+[2022-12-15 03:18:28,250] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11 -O3   -c -o Vfinn_design_wrapper__ALLsup.o Vfinn_design_wrapper__ALLsup.cpp
+[2022-12-15 03:18:28,250]       Archiving Vfinn_design_wrapper__ALL.a ...
+[2022-12-15 03:18:28,250] ar r Vfinn_design_wrapper__ALL.a Vfinn_design_wrapper__ALLcls.o Vfinn_design_wrapper__ALLsup.o
+[2022-12-15 03:18:28,250] ranlib Vfinn_design_wrapper__ALL.a
+[2022-12-15 03:18:28,250] g++ -fPIC -shared pyverilator_wrapper.o verilated.o verilated_vcd_c.o Vfinn_design_wrapper__ALL.a    -o Vfinn_design_wrapper -lm -lstdc++  2>&1 | c++filt
+[2022-12-15 03:18:28,250] make: Leaving directory '/scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_tjg2g17j'
+[2022-12-15 03:18:28,250] ar: creating Vfinn_design_wrapper__ALL.a
+[2022-12-15 03:18:28,407] Running step: step_out_of_context_synthesis [14/17]
+[2022-12-15 03:18:28,409] Running step: step_synthesize_bitfile [15/17]
+[2022-12-15 03:18:28,410] Running step: step_make_pynq_driver [16/17]
+[2022-12-15 03:18:28,411] Running step: step_deployment_package [17/17]
+[2022-12-19 10:29:55,886] Running step: step_qonnx_to_finn [1/17]
+[2022-12-19 10:29:55,889] Running step: step_tidy_up [2/17]
+[2022-12-19 10:29:55,937] Running verification for initial_python
+[2022-12-19 10:29:55,973] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/util/basic.py:286: UserWarning: The values of tensor MultiThreshold_0_out0 can't be represented with the set datatype annotation (INT3), they will be rounded to match the datatype annotation.
+[2022-12-19 10:29:55,973]   warnings.warn(
+[2022-12-19 10:29:58,768] Verification for initial_python : FAIL
+[2022-12-19 10:29:58,771] Running step: step_streamline [3/17]
+[2022-12-19 10:29:59,672] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/transformation/infer_data_layouts.py:124: UserWarning: Assuming 2D input is NC
+[2022-12-19 10:29:59,672]   warnings.warn("Assuming 2D input is NC")
+[2022-12-19 10:29:59,675] Running verification for streamlined_python
+[2022-12-19 10:30:02,482] Verification for streamlined_python : FAIL
+[2022-12-19 10:30:02,485] Running step: step_convert_to_hls [4/17]
+[2022-12-19 10:30:02,548] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_1: INT32 -> INT16
+[2022-12-19 10:30:02,548]   warnings.warn(warn_str)
+[2022-12-19 10:30:02,549] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_2: INT32 -> INT16
+[2022-12-19 10:30:02,549]   warnings.warn(warn_str)
+[2022-12-19 10:30:02,549] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_3: INT32 -> INT16
+[2022-12-19 10:30:02,549]   warnings.warn(warn_str)
+[2022-12-19 10:30:02,559] Running step: step_create_dataflow_partition [5/17]
+[2022-12-19 10:30:02,569] Running step: step_target_fps_parallelization [6/17]
+[2022-12-19 10:30:02,583] Running step: step_apply_folding_config [7/17]
+[2022-12-19 10:30:39,391] Running verification for folded_hls_cppsim
+[2022-12-19 10:30:42,746] Verification for folded_hls_cppsim : FAIL
+[2022-12-19 10:30:42,752] Running step: step_generate_estimate_reports [8/17]
+[2022-12-19 10:30:42,773] Running step: step_hls_codegen [9/17]
+[2022-12-19 10:32:33,948] Running step: step_qonnx_to_finn [1/17]
+[2022-12-19 10:32:33,953] Running step: step_tidy_up [2/17]
+[2022-12-19 10:32:33,989] Running verification for initial_python
+[2022-12-19 10:32:34,023] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/util/basic.py:286: UserWarning: The values of tensor MultiThreshold_0_out0 can't be represented with the set datatype annotation (INT3), they will be rounded to match the datatype annotation.
+[2022-12-19 10:32:34,023]   warnings.warn(
+[2022-12-19 10:32:36,867] Verification for initial_python : FAIL
+[2022-12-19 10:32:36,870] Running step: step_streamline [3/17]
+[2022-12-19 10:32:37,634] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/transformation/infer_data_layouts.py:124: UserWarning: Assuming 2D input is NC
+[2022-12-19 10:32:37,635]   warnings.warn("Assuming 2D input is NC")
+[2022-12-19 10:32:37,638] Running verification for streamlined_python
+[2022-12-19 10:32:40,407] Verification for streamlined_python : FAIL
+[2022-12-19 10:32:40,410] Running step: step_convert_to_hls [4/17]
+[2022-12-19 10:32:40,442] Running step: step_create_dataflow_partition [5/17]
+[2022-12-19 10:32:40,450] Running step: step_target_fps_parallelization [6/17]
+[2022-12-19 10:32:40,457] Running step: step_apply_folding_config [7/17]
+[2022-12-19 10:33:10,440] Running verification for folded_hls_cppsim
+[2022-12-19 10:33:13,360] Verification for folded_hls_cppsim : FAIL
+[2022-12-19 10:33:13,363] Running step: step_generate_estimate_reports [8/17]
+[2022-12-19 10:33:13,370] Running step: step_hls_codegen [9/17]
+[2022-12-19 10:33:37,218] Running step: step_hls_ipgen [10/17]
+[2022-12-19 10:34:45,822] Process ForkPoolWorker-11:
+[2022-12-19 10:34:45,822] Process ForkPoolWorker-12:
+[2022-12-19 10:34:45,822] Process ForkPoolWorker-10:
+[2022-12-19 10:34:45,822] Process ForkPoolWorker-9:
+[2022-12-19 10:35:33,997] Running step: step_qonnx_to_finn [1/17]
+[2022-12-19 10:35:34,000] Running step: step_tidy_up [2/17]
+[2022-12-19 10:35:34,050] Running verification for initial_python
+[2022-12-19 10:35:34,087] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/util/basic.py:286: UserWarning: The values of tensor MultiThreshold_0_out0 can't be represented with the set datatype annotation (INT3), they will be rounded to match the datatype annotation.
+[2022-12-19 10:35:34,087]   warnings.warn(
+[2022-12-19 10:35:36,886] Verification for initial_python : FAIL
+[2022-12-19 10:35:36,891] Running step: step_streamline [3/17]
+[2022-12-19 10:35:37,812] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/transformation/infer_data_layouts.py:124: UserWarning: Assuming 2D input is NC
+[2022-12-19 10:35:37,812]   warnings.warn("Assuming 2D input is NC")
+[2022-12-19 10:35:37,815] Running verification for streamlined_python
+[2022-12-19 10:35:40,626] Verification for streamlined_python : FAIL
+[2022-12-19 10:35:40,629] Running step: step_convert_to_hls [4/17]
+[2022-12-19 10:35:40,692] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_1: INT32 -> INT16
+[2022-12-19 10:35:40,693]   warnings.warn(warn_str)
+[2022-12-19 10:35:40,693] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_2: INT32 -> INT16
+[2022-12-19 10:35:40,693]   warnings.warn(warn_str)
+[2022-12-19 10:35:40,694] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_3: INT32 -> INT16
+[2022-12-19 10:35:40,694]   warnings.warn(warn_str)
+[2022-12-19 10:35:40,704] Running step: step_create_dataflow_partition [5/17]
+[2022-12-19 10:35:40,715] Running step: step_target_fps_parallelization [6/17]
+[2022-12-19 10:35:40,729] Running step: step_apply_folding_config [7/17]
+[2022-12-19 10:36:17,526] Running verification for folded_hls_cppsim
+[2022-12-19 10:36:20,887] Verification for folded_hls_cppsim : FAIL
+[2022-12-19 10:36:20,891] Running step: step_generate_estimate_reports [8/17]
+[2022-12-19 10:36:20,911] Running step: step_hls_codegen [9/17]
+[2022-12-19 10:36:49,205] Running step: step_hls_ipgen [10/17]
+[2022-12-19 10:37:46,730] Process ForkPoolWorker-11:
+[2022-12-19 10:37:46,730] Process ForkPoolWorker-12:
+[2022-12-19 10:39:34,548] Running step: step_qonnx_to_finn [1/17]
+[2022-12-19 10:39:34,552] Running step: step_tidy_up [2/17]
+[2022-12-19 10:39:34,605] Running verification for initial_python
+[2022-12-19 10:39:34,642] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/util/basic.py:286: UserWarning: The values of tensor MultiThreshold_0_out0 can't be represented with the set datatype annotation (INT3), they will be rounded to match the datatype annotation.
+[2022-12-19 10:39:34,642]   warnings.warn(
+[2022-12-19 10:39:37,492] Verification for initial_python : FAIL
+[2022-12-19 10:39:37,496] Running step: step_streamline [3/17]
+[2022-12-19 10:39:38,456] /scratch/bkwan/finntech/finn/deps/qonnx/src/qonnx/transformation/infer_data_layouts.py:124: UserWarning: Assuming 2D input is NC
+[2022-12-19 10:39:38,457]   warnings.warn("Assuming 2D input is NC")
+[2022-12-19 10:39:38,460] Running verification for streamlined_python
+[2022-12-19 10:39:41,299] Verification for streamlined_python : FAIL
+[2022-12-19 10:39:41,301] Running step: step_convert_to_hls [4/17]
+[2022-12-19 10:39:41,363] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_1: INT32 -> INT16
+[2022-12-19 10:39:41,363]   warnings.warn(warn_str)
+[2022-12-19 10:39:41,363] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_2: INT32 -> INT16
+[2022-12-19 10:39:41,363]   warnings.warn(warn_str)
+[2022-12-19 10:39:41,364] /scratch/bkwan/finntech/finn/src/finn/custom_op/fpgadataflow/thresholding_batch.py:125: UserWarning: inputDataType changing for Thresholding_Batch_MultiThreshold_3: INT32 -> INT16
+[2022-12-19 10:39:41,364]   warnings.warn(warn_str)
+[2022-12-19 10:39:41,374] Running step: step_create_dataflow_partition [5/17]
+[2022-12-19 10:39:41,385] Running step: step_target_fps_parallelization [6/17]
+[2022-12-19 10:39:41,399] Running step: step_apply_folding_config [7/17]
+[2022-12-19 10:40:18,487] Running verification for folded_hls_cppsim
+[2022-12-19 10:40:21,969] Verification for folded_hls_cppsim : FAIL
+[2022-12-19 10:40:21,973] Running step: step_generate_estimate_reports [8/17]
+[2022-12-19 10:40:21,994] Running step: step_hls_codegen [9/17]
+[2022-12-19 10:40:50,857] Running step: step_hls_ipgen [10/17]
+[2022-12-19 10:44:14,459] Running step: step_set_fifo_depths [11/17]
+[2022-12-19 10:44:14,485] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for MatrixVectorActivation_0
+[2022-12-19 10:44:14,485]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:44:14,486] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for Thresholding_Batch_0
+[2022-12-19 10:44:14,486]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:44:14,488] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for MatrixVectorActivation_1
+[2022-12-19 10:44:14,488]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:44:14,489] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for Thresholding_Batch_1
+[2022-12-19 10:44:14,489]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:44:14,490] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for MatrixVectorActivation_2
+[2022-12-19 10:44:14,490]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:44:14,491] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for Thresholding_Batch_2
+[2022-12-19 10:44:14,491]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:44:14,538] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for MatrixVectorActivation_2
+[2022-12-19 10:44:14,538] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for Thresholding_Batch_2
+[2022-12-19 10:44:14,538]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:44:14,538]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:44:14,540] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for Thresholding_Batch_1
+[2022-12-19 10:44:14,540]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:44:32,530] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for MatrixVectorActivation_1
+[2022-12-19 10:44:32,531]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:44:32,553] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for Thresholding_Batch_0
+[2022-12-19 10:44:32,553]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:44:50,771] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for MatrixVectorActivation_0
+[2022-12-19 10:44:50,772]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:45:47,737] make: Entering directory '/scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_ixcxemc0'
+[2022-12-19 10:45:47,738] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o pyverilator_wrapper.o /scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_ixcxemc0/pyverilator_wrapper.cpp
+[2022-12-19 10:45:47,738] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+[2022-12-19 10:45:47,738] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o verilated_vcd_c.o /usr/share/verilator/include/verilated_vcd_c.cpp
+[2022-12-19 10:45:47,738] /usr/bin/perl /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vfinn_design_wrapper.cpp > Vfinn_design_wrapper__ALLcls.cpp
+[2022-12-19 10:45:47,739] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o Vfinn_design_wrapper__ALLcls.o Vfinn_design_wrapper__ALLcls.cpp
+[2022-12-19 10:45:47,739] /usr/bin/perl /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vfinn_design_wrapper__Trace.cpp Vfinn_design_wrapper__Syms.cpp Vfinn_design_wrapper__Trace__Slow.cpp > Vfinn_design_wrapper__ALLsup.cpp
+[2022-12-19 10:45:47,739] g++  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVL_PRINTF=printf -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -faligned-new -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -fPIC --std=c++11   -c -o Vfinn_design_wrapper__ALLsup.o Vfinn_design_wrapper__ALLsup.cpp
+[2022-12-19 10:45:47,739]       Archiving Vfinn_design_wrapper__ALL.a ...
+[2022-12-19 10:45:47,739] ar r Vfinn_design_wrapper__ALL.a Vfinn_design_wrapper__ALLcls.o Vfinn_design_wrapper__ALLsup.o
+[2022-12-19 10:45:47,739] ranlib Vfinn_design_wrapper__ALL.a
+[2022-12-19 10:45:47,739] g++ -fPIC -shared pyverilator_wrapper.o verilated.o verilated_vcd_c.o Vfinn_design_wrapper__ALL.a    -o Vfinn_design_wrapper -lm -lstdc++  2>&1 | c++filt
+[2022-12-19 10:45:47,739] make: Leaving directory '/scratch/bkwan/FINN/finn/ML_LL/Model/CNN-1D/tmp/pyverilator_ipstitched_ixcxemc0'
+[2022-12-19 10:45:47,739] ar: creating Vfinn_design_wrapper__ALL.a
+[2022-12-19 10:45:49,254] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for MatrixVectorActivation_0
+[2022-12-19 10:45:49,254]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:45:49,254] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for Thresholding_Batch_0
+[2022-12-19 10:45:49,254]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:45:49,254] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for StreamingDataWidthConverter_Batch_0
+[2022-12-19 10:45:49,254]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:45:49,255] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for MatrixVectorActivation_1
+[2022-12-19 10:45:49,255]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:45:49,255] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for Thresholding_Batch_1
+[2022-12-19 10:45:49,255]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:45:49,255] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for MatrixVectorActivation_2
+[2022-12-19 10:45:49,255]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:45:49,256] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/prepare_ip.py:57: UserWarning: Using pre-existing code for Thresholding_Batch_2
+[2022-12-19 10:45:49,256]   warnings.warn("Using pre-existing code for %s" % node.name)
+[2022-12-19 10:45:49,307] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for Thresholding_Batch_1
+[2022-12-19 10:45:49,307] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for Thresholding_Batch_2
+[2022-12-19 10:45:49,307]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:45:49,307]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:45:49,307] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for MatrixVectorActivation_2
+[2022-12-19 10:45:49,308]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:45:49,308] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for MatrixVectorActivation_1
+[2022-12-19 10:45:49,308]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:45:49,309] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for StreamingDataWidthConverter_Batch_0
+[2022-12-19 10:45:49,309]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:45:49,309] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for Thresholding_Batch_0
+[2022-12-19 10:45:49,310]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:45:49,310] /scratch/bkwan/finntech/finn/src/finn/transformation/fpgadataflow/hlssynth_ip.py:71: UserWarning: Using pre-existing IP for MatrixVectorActivation_0
+[2022-12-19 10:45:49,310]   warnings.warn("Using pre-existing IP for %s" % node.name)
+[2022-12-19 10:46:06,939] Running step: step_create_stitched_ip [12/17]

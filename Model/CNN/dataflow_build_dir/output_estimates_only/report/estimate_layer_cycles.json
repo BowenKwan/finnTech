@@ -1,0 +1,8 @@
+{
+  "MatrixVectorActivation_0": 576,
+  "Thresholding_Batch_0": 576,
+  "MatrixVectorActivation_1": 900,
+  "Thresholding_Batch_1": 100,
+  "MatrixVectorActivation_2": 100,
+  "Thresholding_Batch_2": 1
+}
